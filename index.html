@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serpent Sprint</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="Snake.jpg" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <div class="landing-page">
+            <button id="playButton" class="button">PLAY</button>
+            <button id="highScoreButton" class="button">Highest Score</button>
+            <div class="customization">
+                <label for="snakeColor">Snake Skin</label>
+                <select id="snakeColor" class="button">
+                    <option value="#e94560">Red</option>
+                    <option value="#4CAF50">Green</option>
+                    <option value="#2196F3">Blue</option>
+                </select>
+                <label for="foodColor">Food Color</label>
+                <select id="foodColor" class="button">
+                    <option value="#ff6b6b">Pink</option>
+                    <option value="#FFD700">Gold</option>
+                    <option value="#00FFFF">Cyan</option>
+                </select>
+            </div>
+        </div>
+        <div class="game-container">
+            <div class="game-header">
+                <div>Score: <span id="score">0</span></div>
+                <div>
+                    <button id="pauseButton" class="icon-button"><i class="fas fa-pause"></i></button>
+                    <!-- <button id="fullscreenButton" class="icon-button"><i class="fas fa-expand"></i></button> -->
+                    <button id="exitButton" class="icon-button"><i class="fas fa-sign-out-alt"></i></button>
+                </div>
+            </div>
+            <canvas id="gameCanvas" width="600" height="600"></canvas>
+        </div>
+        <div class="flashcard" id="highScoreCard">
+            <h2>Highest Score</h2>
+            <p id="highScoreDisplay">0</p>
+            <button id="closeHighScore" class="button">Close</button>
+        </div>
+        <div class="flashcard" id="pauseCard">
+            <h2>Game Paused</h2>
+            <p>Current Score: <span id="pauseScore"></span></p>
+            <button id="resumeButton" class="button"><i class="fas fa-play"></i> Resume</button>
+        </div>
+        <div class="game-over" id="gameOverScreen">
+            <h2>Game Over</h2>
+            <p>Your score: <span id="finalScore"></span></p>
+            <button id="playAgainButton" class="button">Play Again</button>
+        </div>
+        <div class="mobile-controls">
+            <div class="mobile-controls-row">
+                <button id="upButton">▲</button>
+            </div>
+            <div class="mobile-controls-row">
+                <button id="leftButton">◀</button>
+                <button id="rightButton">▶</button>
+            </div>
+            <div class="mobile-controls-row">
+                <button id="downButton">▼</button>
+            </div>
+        </div>
+    </div>
+<audio id="eatSound" src="eating-sound-effect-36186.mp3"></audio>
+<audio id="hitWallSound" src="punch-140236.mp3"></audio>
+<!-- <audio id="moveSound" src="movement-101711.mp3"></audio> -->
+    <script src="app.js"></script>
+</body>
+</html>
